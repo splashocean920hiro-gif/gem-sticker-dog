@@ -541,6 +541,87 @@
     margin-top:26px;
   }
 
+
+  /* --- ＋αステップ --- */
+  .step-bonus .step-num{ color:#3D8B5F; }
+  .step-bonus .step-mark{
+    background:#E9F5ED;
+    border-color:#C6E4D2;
+  }
+  .step-bonus .step-mark svg{ color:#2F7A50; }
+
+  .send-line{
+    margin-top:12px;
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:14px 14px 12px;
+  }
+  .send-text{
+    margin:0;
+    font-size:13.5px;
+    line-height:1.8;
+    color:var(--ink);
+    font-weight:700;
+  }
+  .send-text::before{ content:"「"; }
+  .send-text::after{ content:"」"; }
+
+  .copy-btn-sm{
+    margin-top:12px;
+    padding:10px 14px;
+    font-size:13px;
+    border-radius:100px;
+  }
+  .copy-btn-sm svg{ width:14px; height:14px; }
+
+
+  /* --- Etsy販売ブロック --- */
+  .fee-box{
+    margin-top:22px;
+    background:#FBF1DE;
+    border:1.5px solid var(--gold);
+    border-radius:16px;
+    padding:18px 18px 16px;
+  }
+  .fee-box .fee-title{
+    display:block;
+    font-weight:800;
+    color:var(--gold);
+    font-size:13.5px;
+    letter-spacing:.03em;
+    margin-bottom:12px;
+  }
+  .fee-box dl{
+    margin:0;
+    font-size:13px;
+    line-height:1.8;
+  }
+  .fee-box dt{
+    font-weight:700;
+    color:var(--ink);
+  }
+  .fee-box dd{
+    margin:0 0 10px;
+    color:var(--ink-soft);
+  }
+  .fee-box dd:last-of-type{ margin-bottom:0; }
+  .fee-box .fee-total{
+    margin:14px 0 0;
+    padding-top:12px;
+    border-top:1px dashed var(--gold);
+    font-size:13px;
+    font-weight:700;
+    color:var(--ink);
+    line-height:1.75;
+  }
+  .fee-box .fee-note{
+    margin:10px 0 0;
+    font-size:11.5px;
+    line-height:1.7;
+    color:var(--ink-soft);
+  }
+
   /* --- テーマ切り替えチップ --- */
   .theme-tabs{
     display:flex;
@@ -660,44 +741,6 @@
 
 <main class="wrap">
 
-  <section class="howto">
-    <div class="section-heading">
-      <span class="eyebrow">HOW TO USE</span>
-      <h2>たった3ステップで完成</h2>
-      <p>使うのはChatGPTだけ。<br>絵が描けなくても、コピペだけで作れます。</p>
-    </div>
-
-    <div class="howto-card">
-      <ol class="step-flow">
-      <li class="step">
-        <span class="step-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></span>
-        <div class="step-body">
-          <span class="step-num">STEP 1</span>
-          <h3>作りたいテーマを決める</h3>
-          <p>このページのプロンプトは2種類あります。<span class="accent">テーマ別の4つはそのままコピーするだけ</span>。汎用テンプレートのほうは <code>[THEME]</code> や <code>[ELEMENT 1]</code> の部分を「柴犬」「三毛猫」のように書き換えて使います。</p>
-        </div>
-      </li>
-
-      <li class="step">
-        <span class="step-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
-        <div class="step-body">
-          <span class="step-num">STEP 2</span>
-          <h3>ChatGPTに貼り付けて送る</h3>
-          <p>コピーボタンを押して、ChatGPTの入力欄にそのまま貼り付けます。<span class="accent">画像を作れるモデルを選んでおく</span>のがポイント。1回送るだけで、4枚が2×2に並んだ状態で出てきます。</p>
-        </div>
-      </li>
-
-      <li class="step">
-        <span class="step-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
-        <div class="step-body">
-          <span class="step-num">STEP 3</span>
-          <h3>気に入った絵を保存する</h3>
-          <p>スマホは画像を長押し、パソコンは右クリックで保存できます。イメージと違うときは<span class="accent">「もっと明るい色で」「背景は白のままで」</span>と一言添えて送り直すと、狙ったものに近づきます。</p>
-        </div>
-      </li>
-      </ol>
-    </div>
-  </section>
 
 
   <div class="section-heading">
@@ -841,6 +884,123 @@
 
 
 
+  <section class="howto">
+    <div class="section-heading">
+      <span class="eyebrow">HOW TO USE</span>
+      <h2>たった3ステップで完成</h2>
+      <p>使うのはChatGPTだけ。<br>絵が描けなくても、コピペだけで作れます。</p>
+    </div>
+
+    <div class="howto-card">
+      <ol class="step-flow">
+      <li class="step">
+        <span class="step-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></span>
+        <div class="step-body">
+          <span class="step-num">STEP 1</span>
+          <h3>作りたいテーマを決める</h3>
+          <p>このページのプロンプトは2種類あります。<span class="accent">テーマ別の4つはそのままコピーするだけ</span>。汎用テンプレートのほうは <code>[THEME]</code> や <code>[ELEMENT 1]</code> の部分を「柴犬」「三毛猫」のように書き換えて使います。</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <span class="step-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
+        <div class="step-body">
+          <span class="step-num">STEP 2</span>
+          <h3>ChatGPTに貼り付けて送る</h3>
+          <p>コピーボタンを押して、ChatGPTの入力欄にそのまま貼り付けます。<span class="accent">画像を作れるモデルを選んでおく</span>のがポイント。1回送るだけで、4枚が2×2に並んだ状態で出てきます。</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <span class="step-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
+        <div class="step-body">
+          <span class="step-num">STEP 3</span>
+          <h3>気に入った絵を保存する</h3>
+          <p>スマホは画像を長押し、パソコンは右クリックで保存できます。イメージと違うときは<span class="accent">「もっと明るい色で」「背景は白のままで」</span>と一言添えて送り直すと、狙ったものに近づきます。</p>
+        </div>
+      </li>
+
+      <li class="step step-bonus">
+        <span class="step-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span>
+        <div class="step-body">
+          <span class="step-num">＋α</span>
+          <h3>作ったステッカーを売るなら</h3>
+          <p>ステッカーを作った<span class="accent">同じチャットに続けて</span>こう送ると、Etsyに出すときのタイトルと説明文まで用意できます。</p>
+          <div class="send-line">
+            <p class="send-text">このステッカーをEtsyで販売する時にSEOを意識した売れる説明文とタイトルを考えて</p>
+            <button class="copy-btn copy-btn-sm" id="copy-btn-etsy">
+              <span class="txt-default"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>この文をコピー</span>
+              <span class="txt-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>コピーしました</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="etsy">
+    <div class="section-heading">
+      <span class="eyebrow">SELL ON ETSY</span>
+      <h2>Etsyで売るまでの4ステップ</h2>
+      <p>作ったステッカーは、画像データのまま販売できます。<br>在庫も発送もいりません。</p>
+    </div>
+
+    <div class="howto-card">
+      <ol class="step-flow">
+        <li class="step">
+          <span class="step-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></span>
+          <div class="step-body">
+            <span class="step-num">STEP 1</span>
+            <h3>アカウントを作る</h3>
+            <p>etsy.com を開いて「Sign in」から「Register」に進み、メールアドレスで登録します。<span class="accent">買い物用のアカウントをそのまま使えます</span>。</p>
+          </div>
+        </li>
+
+        <li class="step">
+          <span class="step-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
+          <div class="step-body">
+            <span class="step-num">STEP 2</span>
+            <h3>Payoneerをつなぐ</h3>
+            <p>日本から売る場合、<span class="accent">売上の受け取りにPayoneerの登録が必須</span>です。登録は無料。本人確認としてパスポートか運転免許証の写真と自撮り写真を出します。審査に最大3日ほどかかるので、先に済ませておくとスムーズです。</p>
+          </div>
+        </li>
+
+        <li class="step">
+          <span class="step-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
+          <div class="step-body">
+            <span class="step-num">STEP 3</span>
+            <h3>ショップを設定する</h3>
+            <p>ショップ名・言語・通貨を決めます。ショップ名は<span class="accent">あとから変えにくい</span>ので、扱うジャンルが伝わる英語名にしておくと安心です。</p>
+          </div>
+        </li>
+
+        <li class="step">
+          <span class="step-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></span>
+          <div class="step-body">
+            <span class="step-num">STEP 4</span>
+            <h3>デジタル商品として出品する</h3>
+            <p>出品画面で商品の種類を「Digital」にして、ステッカーの画像ファイルをアップロードします。データ販売なので<span class="accent">配送の設定はいりません</span>。タイトルと説明文は、さきほどChatGPTに作ってもらったものを貼り付けるだけです。</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="fee-box">
+        <span class="fee-title">かかるお金の目安</span>
+        <dl>
+          <dt>開店するとき（1回だけ）</dt>
+          <dd>出店料 15USD前後 ※画面に出る金額を確認してください</dd>
+          <dt>出品するたび</dt>
+          <dd>1商品あたり 0.20USD</dd>
+          <dt>売れたとき</dt>
+          <dd>取引手数料 6.5％ ＋ 決済手数料 6％＋0.30USD</dd>
+        </dl>
+        <p class="fee-total">ざっくり、売上の2割ほどが手数料として引かれます。</p>
+        <p class="fee-note">このほか、日本円で受け取る際に為替の手数料がかかります。手数料は改定されることがあるので、出品前にEtsyの公式ページで最新の金額を確認してください。</p>
+      </div>
+    </div>
+  </section>
+
   <section class="line-cta">
     <div class="line-cta-card">
       <p class="line-cta-eyebrow">特典の受け取りありがとうございました！</p>
@@ -958,6 +1118,7 @@
   }
 
   setupCopyButton('copy-btn-generic', GENERIC_PROMPT_TEXT);
+  setupCopyButton('copy-btn-etsy', "このステッカーをEtsyで販売する時にSEOを意識した売れる説明文とタイトルを考えて");
 })();
 </script>
 
